@@ -1,10 +1,50 @@
 {% extends 'account/base.html' %}
-
+{% load static%}
 {% block content %}
-    <div class="text-center">
-        <h2>Home</h2>
+<div class="container">
+    <div class="text-center mt-5">
+        <h2>Welcome to LearningBuddy</h2>
         <p>Hello {{ user.first_name }}!</p>
-        <p>Your Username : {{ user }}</p>
+        <p>Your Username: {{ user }}</p>
+    </div>
+    
+    <div class="row mt-5">
+        <div class="col-md-6">
+            <h3>About LearningBuddy</h3>
+            <p>
+                LearningBuddy is a basic educational platform designed to help you access and manage your learning materials with ease.
+            </p>
+            <p>
+                It provides a secure and convenient way to store and organize your educational resources, making it easier for you to focus on your learning journey.
+            </p>
+        </div>
+        <div class="col-md-6">
+            <img src="{% static 'images/learningbuddy.png' %}" alt="LearningBuddy Logo" class="img-fluid" />
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-md-6">
+            <h3>Key Features</h3>
+            <ul>
+                <li>User Registration and Authentication</li>
+                <li>Secure OAuth2 Integration</li>
+                <li>Resource Management</li>
+                <li>Resource Server for Storage</li>
+                <li>Dashboard for Resource Overview</li>
+                <li>User Profile Management</li>
+                <li>Security Measures</li>
+                <li>Responsive Design</li>
+                <li>Documentation for Setup</li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <img src="{% static 'images/student.jpg' %}" alt="LearningBuddy Features" class="img-fluid" />
+        </div>
+    </div>
+
+    <div class="text-center mt-5">
         <a class="btn btn-dark" href="{% url 'socialaccount_connections' %}">Settings</a>
     </div>
+</div>
 {% endblock %}

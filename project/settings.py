@@ -57,6 +57,7 @@ SOCIALACCOUNT_PROVIDERS = {
             'client_id': '569678598283-qg3igm8lr92edanc26d9spasun52v80u.apps.googleusercontent.com',
             'secret': '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',
         },
+        
     }
 }
 
